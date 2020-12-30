@@ -78,7 +78,7 @@ export default class Slide {
 
   //centraliza o slide
   slidePosition(slide) {
-    const margin = (this.wrapper.offsetLeft - slide.offsetLeft) / 2;
+    const margin = (this.wrapper.offsetWidth - slide.offsetWidth) / 2;
     return -(slide.offsetLeft - margin);
   }
 
@@ -103,6 +103,7 @@ export default class Slide {
     }
   }
 
+  // muda o slide de acordo com o index
   changeSlide(index) {
     const activeSlide = this.slideArray[index];
     this.moveSlide(activeSlide.position);
